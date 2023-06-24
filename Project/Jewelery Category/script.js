@@ -6,13 +6,16 @@ const necklace = document.querySelector(".necklace");
 
 const allProducts = document.querySelector(".allProducts");
 
+const newDiv = document.querySelector(".newWindow")
+
 const filteredArray = [];
 const data = [];
 
-const ProductInfo = (data) => {
-  mainBody.innerHTML = `<div><h3>${data.title}</h3></div>
-<div><p>${data.price}</p></div>`;
-};
+// const ProductInfo = (data) => {
+//   newDiv.innerHTML = `<div><h3>${data.title}</h3></div>
+// <div><p>${data.price}</p></div>
+// <div><img src="${data.image}"></img></div>`;
+// };
 
 
 const displayData = (data) => {
@@ -22,17 +25,17 @@ const displayData = (data) => {
       cardSection.appendChild(productDiv);
       productDiv.addEventListener("click", () => {
         console.log(data);
-        ProductInfo(products);
+        //ProductInfo(products);
       });
       return (productDiv.innerHTML = `
  		<div class="product-card">
      <div class="product-card-header">
-         <img src="${products.image}"></img>
+         <img src="${products.image}" width="900px" height="900px"></img>
        </div>
      <div class="product-card-details">
  		<p>${products.title}</h>
  				<h3>${products.price} $</h3>
-         <button class="cartBtn">Add to card</button>
+        <button class="cartBtn">Add to card</button>
  		</div>
  		  </div>
  		`);
